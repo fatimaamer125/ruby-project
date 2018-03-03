@@ -1,0 +1,44 @@
+<br><br><br>
+<div class="container">
+<%= form_for(@add_info) do |f| %>
+  <% if @add_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@add_info.errors.count, "error") %> prohibited this add_info from being saved:</h2>
+
+      <ul>
+      <% @add_info.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :الاسم %><br>
+    <%= f.text_field :name, required:true, class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label :الموقع %><br>
+    <%= f.text_field :location, required:true, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :الرقم %><br>
+    <%= f.text_field :number, required:true, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :الحالة %><br>
+    <%= f.text_field :condition, required:true, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :صورة_عن_الحالة %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :وصف_الحالة %><br>
+    <%= f.text_area :description, required:true, class:"form-control", size: "60x12" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "تأكيد", class:"btn defaul"%>
+  </div>
+<% end %>
+</div>

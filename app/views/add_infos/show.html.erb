@@ -1,0 +1,36 @@
+<br><br><br><br><br><br>
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>الاسم:</strong>
+  <%= @add_info.name %>
+</p>
+
+<p>
+  <strong>الموقع:</strong>
+  <%= @add_info.location %>
+</p>
+
+<p>
+  <strong>رقم_الهاتف:</strong>
+  <%= @add_info.number %>
+</p>
+
+<p>
+  <strong>الحالة:</strong>
+  <%= @add_info.condition %>
+</p>
+<p>
+  <strong>:الصورة </strong>
+  <%= image_tag @add_info.image(:thumb)%>
+</p>
+<p>
+  <strong>الوصف:</strong>
+  <%= @add_info.description %>
+</p>
+
+<%= link_to 'تعديل', edit_add_info_path(@add_info), class:"btn default" %>
+<%= link_to 'رجوع', add_infos_path , class:"btn default" %>
+</div>
+<br><br><br><br><br><br>

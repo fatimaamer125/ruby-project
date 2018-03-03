@@ -1,0 +1,32 @@
+<br><br><br><br><br><br>
+<div class="container">
+<p id="notice"><%= notice %></p>
+<h1>عرض الحالات </h1>
+<table>
+  <tbody>
+    <% @add_infos.each do |add_info| %>
+      <div class="container">
+        <div class="row">
+          <div class="col-3">
+       <%= add_info.name %>
+          </div>
+       <div class="col-3">
+       <%= add_info.location %>
+       </div>
+       <div class="col-3">
+       <%= add_info.description %>
+       </div>
+       <br>
+       <div class="col-3">
+        <%= link_to 'عرض', add_info , class:"btn default"%></td>
+        <%= link_to 'تعديل', edit_add_info_path(add_info), class:"btn default" %></td>
+        <%= link_to 'مسح الحالة', add_info, method: :delete, data: { confirm:'هل انت متأكد؟' }, class:"btn default" %></td>
+      </div>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'اضافة حالة جديدة', new_add_info_path, class:"btn default" %>
+</div><br><br><br><br><br><br>
