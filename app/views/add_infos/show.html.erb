@@ -6,30 +6,31 @@
   <strong>الاسم:</strong>
   <%= @add_info.name %>
 </p>
-
+<br>
 <p>
   <strong>الموقع:</strong>
   <%= @add_info.location %>
 </p>
-
+<br>
 <p>
   <strong>رقم_الهاتف:</strong>
   <%= @add_info.number %>
 </p>
-
+<br>
 <p>
   <strong>الحالة:</strong>
   <%= @add_info.condition %>
 </p>
+<br>
 <p>
-  <strong>:الصورة </strong>
-  <%= image_tag @add_info.image(:thumb)%>
+  <%= image_tag @add_info.image(:medium), class:"img-rounded"%>
 </p>
+<br>
 <p>
   <strong>الوصف:</strong>
   <%= @add_info.description %>
 </p>
-
+<br>
 <%= link_to 'تعديل', edit_add_info_path(@add_info), class:"btn default" %>
 <%= link_to 'رجوع', add_infos_path , class:"btn default" %>
 </div>

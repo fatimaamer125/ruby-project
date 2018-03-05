@@ -5,4 +5,6 @@ class AddInfo < ActiveRecord::Base
     validates :name, length: { minimum: 2 }
     validates :number, length: { maximum: 15 }
     validates :description, length: { maximum: 150 }
+    #validates :image, file_size: { less_than: 2.gigabytes }
+    
 end
