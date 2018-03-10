@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :add_infos
   resources :users
   resources :posts
+  resources :mobs
+  
   root 'posts#index'
   
   # The priority is based upon order of creation: first created -> highest priority.
